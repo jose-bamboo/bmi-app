@@ -15,8 +15,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/app_name"
-        android:textColor="#FFFFFF"
+        android:text="@string/title"
+        android:textColor="#FFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +28,9 @@
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FF3232"
         android:onClick="validate"
-        android:text="Calculate"
+        android:text="@string/calculate"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +47,7 @@
         android:layout_marginTop="160dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/weightPH"
         android:inputType="number|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -53,11 +55,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/weightLbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Weight(kg)"
+        android:text="@string/weightLbl"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/weight"
         app:layout_constraintEnd_toEndOf="@+id/weight"
@@ -65,12 +67,12 @@
         app:layout_constraintStart_toStartOf="@+id/weight" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/heightLbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Height(cm)"
+        android:text="@string/heightLbl"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/height"
         app:layout_constraintEnd_toEndOf="@+id/height"
@@ -86,6 +88,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
+        android:hint="@string/heightPH"
         android:inputType="number|textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,13 +103,41 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:background="#009688"
         android:onClick="clearFields"
-        android:text="Clear"
+        android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E65709"
+        android:onClick="toggleSomething"
+        android:text="@string/changeColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <Switch
+        android:id="@+id/toggleSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/toggleSwitch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

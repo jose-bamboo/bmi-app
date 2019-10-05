@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
+    <string name="title">Calculator</string>
+    <string name="calculate">Metric</string>
+    <string name="clear">Clear</string>
+    <string name="changeColor">Color</string>
+    <string name="weightLbl">Weight (kg)</string>
+    <string name="heightLbl">Height (cm)</string>
+    <string name="heightPH">Height (cm)</string>
+    <string name="weightPH">Weight (kg)</string>
+    <string name="toggleSwitch">Metric</string>
 </resources>
