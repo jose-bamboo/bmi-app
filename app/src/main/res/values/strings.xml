@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
-    <string name="title">Calculator</string>
+    <string name="title">BMI</string>
     <string name="calculate">Metric</string>
     <string name="clear">Clear</string>
     <string name="changeColor">Color</string>
@@ -9,4 +9,12 @@
     <string name="heightPH">Height (cm)</string>
     <string name="weightPH">Weight (kg)</string>
     <string name="toggleSwitch">Metric</string>
+
+    <string name="weightKg">Weight (kg)</string>
+    <string name="heightCm">Height (cm)</string>
+    <string name="weightLbs">Weight (lbs)</string>
+    <string name="heightIn">Height (in)</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial</string>
+
 </resources>

@@ -33,20 +33,20 @@ public class MainActivity extends AppCompatActivity {
                 EditText heightTxt = findViewById(R.id.height);
                 Button calculate = findViewById(R.id.calculate);
                 if(isChecked) {
-                    weightLbl.setText("Weight (lbs)");
-                    heightLbl.setText("Height (in)");
-                    calculate.setText("Imperial");
-                    weightTxt.setHint("Weight (lbs)");
+                    weightLbl.setText(R.string.weightLbs);
+                    heightLbl.setText(R.string.heightIn);
+                    calculate.setText(R.string.imperial);
+                    weightTxt.setHint(R.string.weightLbs);
                     heightTxt.setHint("Height ((ft * 12) + in -> in)");
-                    toggleSwitch.setText("Imperial");
+                    toggleSwitch.setText(R.string.imperial);
                     Toast.makeText(getApplicationContext(), "Pounds/in", Toast.LENGTH_LONG).show();
                 } else {
-                    weightLbl.setText("Weight (kg)");
-                    heightLbl.setText("Height (cm)");
-                    calculate.setText("Metric");
-                    weightTxt.setHint("Weight (kg)");
-                    heightTxt.setHint("Height (cm)");
-                    toggleSwitch.setText("Metric");
+                    weightLbl.setText(R.string.weightKg);
+                    heightLbl.setText(R.string.heightCm);
+                    calculate.setText(R.string.metric);
+                    weightTxt.setHint(R.string.weightKg);
+                    heightTxt.setHint(R.string.heightCm);
+                    toggleSwitch.setText(R.string.metric);
                     Toast.makeText(getApplicationContext(), "KG/cm", Toast.LENGTH_LONG).show();
                 }
             }
@@ -55,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculate(View view, EditText weightVal, EditText heightVal) {
         Intent intent;
-        float weight = Integer.parseInt(weightVal.getText().toString());
-        float height = Integer.parseInt(heightVal.getText().toString());
+        float weight = Float.parseFloat(weightVal.getText().toString());
+        float height = Float.parseFloat(heightVal.getText().toString());
         float BMI = weight / square(height/100);
         // Store data in HashMap with String and String as key Value Pairs
         Map<String, String> dataMap = new LinkedHashMap<>();
         dataMap.put("Category", validate(BMI));
-        dataMap.put("Result", Float.toString(Math.round(BMI)));
+        dataMap.put("Result", Float.toString(BMI));
         // Attempt to store data in JSON file
         System.out.println(dataMap.toString());
         intent = new Intent(this, ResultActivity.class);
@@ -71,13 +71,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void imperial(View view, EditText weightVal, EditText heightVal) {
         Intent intent;
-        float weight = Integer.parseInt(weightVal.getText().toString());
-        float height = Integer.parseInt(heightVal.getText().toString());
-        float BMI = (703 * weight) / square(height);
+        float weight = Float.parseFloat(weightVal.getText().toString());
+        float height = Float.parseFloat(heightVal.getText().toString());
+        float BMI = (weight / square(height)) * 703;
         // Store data in HashMap with String and String as key Value Pairs
         Map<String, String> dataMap = new LinkedHashMap<>();
         dataMap.put("Category", validate(BMI));
-        dataMap.put("Result", Float.toString(Math.round(BMI)));
+        dataMap.put("Result", Float.toString(BMI));
         // Attempt to store data in JSON file
         System.out.println(dataMap.toString());
         intent = new Intent(this, ResultActivity.class);
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         return BMI_res;
     }
 
-    public int square(float num){
-        return Math.round(num * num);
+    public float square(float num){
+        return num * num;
     }
 }

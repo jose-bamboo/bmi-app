@@ -17,12 +17,13 @@
         android:layout_marginBottom="16dp"
         android:text="@string/title"
         android:textColor="#FFF"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <Button
         android:id="@+id/calculate"
@@ -46,9 +47,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="16dp"
+        android:autofillHints="Must be in kg"
         android:ems="10"
         android:hint="@string/weightPH"
-        android:inputType="number|textPersonName"
+        android:inputType="numberDecimal"
+        android:labelFor="@id/weightLbl"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,9 +65,10 @@
         android:layout_marginBottom="16dp"
         android:text="@string/weightLbl"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/weight"
         app:layout_constraintEnd_toEndOf="@+id/weight"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/weight" />
 
     <TextView
@@ -74,12 +79,12 @@
         android:layout_marginBottom="24dp"
         android:text="@string/heightLbl"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/height"
         app:layout_constraintEnd_toEndOf="@+id/height"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/height"
         app:layout_constraintTop_toBottomOf="@+id/weight"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/height"
@@ -87,9 +92,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:autofillHints="Must be in cm"
         android:ems="10"
         android:hint="@string/heightPH"
-        android:inputType="number|textPersonName"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
